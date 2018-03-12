@@ -7,24 +7,63 @@
         box-sizing: border-box;
         font-family: sans-serif;
       }
+
+      .columnmenu {
+        background-color: lightblue;
+        width: 300px;
+        border: 10px solid blue;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      body {
+        background-color: lightblue;
+      }
+
+      h1 {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      td {
+        color: black;
+        font-size: 30px;
+        text-align: center;
+      }
+
     </style>
   </head>
 
   <body>
     <div class="header">
       <h1>
-        Balraj's Portfolio
+        Balraj's Electronic Portfolio
       </h1>
+      <hr>
     </div>
     <div class="clearfix">
-      <div class="column menu">
-      <ul>
-      <li><a href="">Accomplishments</a></li>
-      <li><a href="">Experience</a></li>
-      <li><a href="">Academic History</a></li>
-      <li><a href="">Contact Info</a></li>
-      <li><a href="">Fun Facts</a></li>
-      </ul>
+      <div class="columnmenu">
+        <table>
+          <tr>
+            <td>Accomplishments</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td>Experience</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td>Academic History</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td>Contact Info</td>
+          </tr>
+        </table>
       </div>
     </div>
   </body>
