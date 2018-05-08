@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
+<script>
+  let diameter = prompt('What is the diameter of the Pizza? (Inches)');
+  let labour = 0.75;
+  let rent = 1;
+  let materials = 0.05 * diameter * diameter;
+  let cost = labour + rent + materials;
+  document.write(cost);
 
-  <head>
-
-  </head>
-
-  <body>
-    <script>
-      let diameter = prompt('What is the diameter of the Pizza? (Inches)');
-      let labour = 0.75;
-      let rent = 1;
-      let materials = 0.05 * diameter * diameter;
-      let cost = labour + rent + materials;
-      document.write(cost);
-
-    </script>
-  </body>
-
-
-</html>
+</script>
