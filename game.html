@@ -1,0 +1,56 @@
+function getUserChoice() {
+  let userInput = prompt("Enter rock, paper or scissors to play!");
+  userInput = userInput.toLowerCase();
+  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+    return userInput;
+  } else {
+    alert('Invald choice!');
+  }
+}
+
+function getComputerChoice() {
+  let number = Math.floor(Math.random() * 3);
+  if (number === 0) {
+    return 'rock';
+  } else if (number === 1) {
+    return 'paper';
+  } else if (number === 2) {
+    return 'scissors';
+  }
+}
+
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    document.write('It\'s a tie!');
+  }
+  if (userChoice === 'rock') {
+    if (computerChoice === 'scissors') {
+      alert('User wins!')
+    } else if (computerChoice === 'paper') {
+      document.write('Computer wins!')
+    }
+  }
+  if (userChoice === 'paper') {
+    if (computerChoice === 'scissors') {
+      alert('Computer wins!')
+    } else if (computerChoice === 'rock') {
+      document.write('User wins!')
+    }
+  }
+  if (userChoice === 'scissors') {
+    if (computerChoice === 'paper') {
+      alert('User wins!')
+    } else if (computerChoice === 'rock')
+      document.write('Computer wins!')
+  }
+}
+
+function playGame() {
+  determineWinner(userChoice, computerChoice)
+  document.write(userChoice);
+  document.write('<br>');
+  let userChoice = getUserChoice();
+  let computerChoice = getComputerChoice();
+}
+
+document.write(determineWinner(userChoice, computerChoice));
