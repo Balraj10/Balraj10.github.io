@@ -46,11 +46,12 @@ function determineWinner(userChoice, computerChoice) {
 }
 
 function playGame() {
-  determineWinner(userChoice, computerChoice)
-  document.write(userChoice);
-  document.write('<br>');
   let userChoice = getUserChoice();
+  document.write(userChoice);
+  document.write('<br>')
   let computerChoice = getComputerChoice();
+  document.write(computerChoice);
+  document.write('<br>');
+  document.write(determineWinner(userChoice, computerChoice));
 }
-
-document.write(determineWinner(userChoice, computerChoice));
+playGame();
