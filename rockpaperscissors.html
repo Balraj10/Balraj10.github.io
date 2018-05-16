@@ -21,37 +21,37 @@ function getComputerChoice() {
 
 function determineWinner(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
-    document.write('It\'s a tie!');
+    return('It\'s a tie!');
   }
   if (userChoice === 'rock') {
     if (computerChoice === 'scissors') {
-      alert('User wins!')
+      return('User wins!')
     } else if (computerChoice === 'paper') {
-      document.write('Computer wins!')
+      return('Computer wins!');
     }
   }
   if (userChoice === 'paper') {
     if (computerChoice === 'scissors') {
-      alert('Computer wins!')
+      return('Computer wins!')
     } else if (computerChoice === 'rock') {
-      document.write('User wins!')
+      return('User wins!');
     }
   }
   if (userChoice === 'scissors') {
     if (computerChoice === 'paper') {
-      alert('User wins!')
+      return('User wins!')
     } else if (computerChoice === 'rock')
-      document.write('Computer wins!')
+      return('Computer wins!');
   }
 }
 
 function playGame() {
   let userChoice = getUserChoice();
-  document.write(userChoice);
-  document.write('<br>')
   let computerChoice = getComputerChoice();
-  document.write(computerChoice);
+  document.write("The User Choice: " + userChoice);
   document.write('<br>');
-  document.write(determineWinner(userChoice, computerChoice));
+  document.write("The Computer Choice: " + computerChoice);
+  document.write('<br>');
+  document.write("The result: " + determineWinner(userChoice, computerChoice));
 }
 playGame();
