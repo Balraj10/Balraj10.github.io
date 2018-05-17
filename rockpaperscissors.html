@@ -1,4 +1,5 @@
 <script>
+
 function getUserChoice() {
   let userInput = prompt('Enter rock, paper, scissors, lizard or spock to play!');
   userInput = userInput.toLowerCase();
@@ -28,7 +29,7 @@ function determineWinner(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
     return ('It\'s a tie!');
   }
-}
+
 if (userChoice === 'rock') {
   if (computerChoice === 'scissors') {
     return ('User wins!')
@@ -96,6 +97,7 @@ if (userChoice === 'bomb') {
   } else if (computerChoice === 'spock') {
     return ('User wins!');
   }
+}
 }
 
 function playGame() {
