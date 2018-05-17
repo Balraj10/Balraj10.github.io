@@ -10,7 +10,7 @@ function getUserChoice() {
 }
 
 function getComputerChoice() {
-  let number = Math.floor(Math.random() * 5);
+  let number = Math.floor(Math.random() * 6);
   if (number === 0) {
     return 'rock';
   } else if (number === 1) {
@@ -105,5 +105,8 @@ function playGame() {
   document.write('<br>');
   document.write('The Computer Choice: ' + computerChoice);
   document.write('<br>');
-  document.write('The result
+  document.write('The result: ' + determineWinner(userChoice, computerChoice));
+}
+playGame();
+
 </script>
