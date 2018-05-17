@@ -27,34 +27,34 @@ function determineWinner(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
     return ('It\'s a tie!');
   }
+}
+if (userChoice === 'rock') {
+  if (computerChoice === 'scissors') {
+    return ('User wins!')
+  } else if (computerChoice === 'paper') {
+    return ('Computer wins!')
+  } else if (computerChoice === 'lizard') {
+    return ('User wins!')
+  } else if (computerChoice === 'spock') {
+    return ('Computer wins!');
   }
-  if (userChoice === 'rock') {
-    if (computerChoice === 'scissors') {
-      return ('User wins!')
-    } else if (computerChoice === 'paper') {
-      return ('Computer wins!')
-    } else if (computerChoice === 'lizard') {
-      return ('User wins!')
-    } else if (computerChoice === 'spock') {
-      return ('Computer wins!');
-    }
+}
+if (userChoice === 'paper') {
+  if (computerChoice === 'scissors') {
+    return ('Computer wins!')
+  } else if (computerChoice === 'rock') {
+    return ('User wins!')
+  } else if (computerChoice === 'lizard') {
+    return ('Computer wins!')
+  } else if (computerChoice === 'spock') {
+    return ('User wins!');
   }
-  if (userChoice === 'paper') {
-    if (computerChoice === 'scissors') {
-      return ('Computer wins!')
-    } else if (computerChoice === 'rock') {
-      return ('User wins!')
-    } else if (computerChoice === 'lizard') {
-      return ('Computer wins!')
-    } else if (computerChoice === 'spock') {
-      return ('User wins!');
-    }
-  }
-  if (userChoice === 'scissors') {
-    if (computerChoice === 'paper') {
-      return ('User wins!')
-    } else if (computerChoice === 'rock')
-      return ('Computer wins!')
+}
+if (userChoice === 'scissors') {
+  if (computerChoice === 'paper') {
+    return ('User wins!')
+  } else if (computerChoice === 'rock') {
+    return ('Computer wins!')
   } else if (computerChoice === 'lizard') {
     return ('User wins!')
   } else if (computerChoice === 'spock') {
@@ -66,10 +66,10 @@ if (userChoice === 'lizard') {
     return ('Computer wins!')
   } else if (computerChoice === 'paper') {
     return ('User wins!')
-  } else if (computerChoice === 'scrissors') {
+  } else if (computerChoice === 'scissors') {
     return ('Computer wins!')
   } else if (computerChoice === 'spock') {
-    return ('User wins!')
+    return ('User wins!');
   }
 }
 if (userChoice === 'spock') {
@@ -77,10 +77,10 @@ if (userChoice === 'spock') {
     return ('User wins!')
   } else if (computerChoice === 'paper') {
     return ('Computer wins!')
-  } else if (computerChoice === 'scrissors') {
+  } else if (computerChoice === 'scissors') {
     return ('User wins!')
   } else if (computerChoice === 'lizard') {
-    return ('Computer wins!')
+    return ('Computer wins!');
   }
 }
 
