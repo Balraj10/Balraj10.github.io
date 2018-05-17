@@ -1,8 +1,8 @@
 <script>
 function getUserChoice() {
-  let userInput = prompt("Enter rock, paper, scissors, lizard or spock to play!");
+  let userInput = prompt('Enter rock, paper, scissors, lizard or spock to play!');
   userInput = userInput.toLowerCase();
-  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'lizard' || userInput === 'spock') {
+  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'lizard' || userInput === 'spock' || userInput === 'bomb') {
     return userInput;
   } else {
     alert('Invald choice!');
@@ -84,15 +84,26 @@ if (userChoice === 'spock') {
     return ('Computer wins!');
   }
 }
+if (userChoice === 'bomb') {
+  if (computerChoice === 'rock') {
+    return ('User wins!')
+  } else if (computerChoice === 'paper') {
+    return ('User wins!')
+  } else if (computerChoice === 'scissors') {
+    return ('User wins!')
+  } else if (computerChoice === 'lizard') {
+    return ('User wins!')
+  } else if (computerChoice === 'spock') {
+    return ('User wins!');
+  }
+}
 
 function playGame() {
   let userChoice = getUserChoice();
   let computerChoice = getComputerChoice();
-  document.write("The User Choice: " + userChoice);
+  document.write('The User Choice: ' + userChoice);
   document.write('<br>');
-  document.write("The Computer Choice: " + computerChoice);
+  document.write('The Computer Choice: ' + computerChoice);
   document.write('<br>');
-  document.write("The result: " + determineWinner(userChoice, computerChoice));
-}
-playGame();
+  document.write('The result
 </script>
