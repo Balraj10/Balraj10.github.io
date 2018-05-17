@@ -1,7 +1,7 @@
 function getUserChoice() {
-  let userInput = prompt("Enter rock, paper or scissors to play!");
+  let userInput = prompt("Enter rock, paper, scissors, lizard or spock to play!");
   userInput = userInput.toLowerCase();
-  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'lizard' || userInput === 'spock') {
     return userInput;
   } else {
     alert('Invald choice!');
@@ -9,39 +9,77 @@ function getUserChoice() {
 }
 
 function getComputerChoice() {
-  let number = Math.floor(Math.random() * 3);
+  let number = Math.floor(Math.random() * 5);
   if (number === 0) {
     return 'rock';
   } else if (number === 1) {
     return 'paper';
   } else if (number === 2) {
     return 'scissors';
+  } else if (number === 3) {
+    return 'lizard';
+  } else if (number === 4) {
+    return 'spock';
   }
 }
 
 function determineWinner(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
-    return('It\'s a tie!');
+    return ('It\'s a tie!');
   }
   if (userChoice === 'rock') {
     if (computerChoice === 'scissors') {
-      return('User wins!')
+      return ('User wins!')
     } else if (computerChoice === 'paper') {
-      return('Computer wins!');
+      return ('Computer wins!')
+    } else if (computerChoice === 'lizard') {
+      return ('User wins!')
+    } else if (computerChoice === 'spock') {
+      return ('Computer wins!');
     }
   }
   if (userChoice === 'paper') {
     if (computerChoice === 'scissors') {
-      return('Computer wins!')
+      return ('Computer wins!')
     } else if (computerChoice === 'rock') {
-      return('User wins!');
+      return ('User wins!')
+    } else if (computerChoice === 'lizard') {
+      return ('Computer wins!')
+    } else if (computerChoice === 'spock') {
+      return ('User wins!');
     }
   }
   if (userChoice === 'scissors') {
     if (computerChoice === 'paper') {
-      return('User wins!')
+      return ('User wins!')
     } else if (computerChoice === 'rock')
-      return('Computer wins!');
+      return ('Computer wins!')
+  } else if (computerChoice === 'lizard') {
+    return ('User wins!')
+  } else if (computerChoice === 'spock') {
+    return ('Computer wins!');
+  }
+}
+if (userChoice === 'lizard') {
+  if (computerChoice === 'rock') {
+    return ('Computer wins!')
+  } else if (computerChoice === 'paper') {
+    return ('User wins!')
+  } else if (computerChoice === 'scrissors') {
+    return ('Computer wins!')
+  } else if (computerChoice === 'spock') {
+    return ('User wins!')
+  }
+}
+if (userChoice === 'spock') {
+  if (computerChoice === 'rock') {
+    return ('User wins!')
+  } else if (computerChoice === 'paper') {
+    return ('Computer wins!')
+  } else if (computerChoice === 'scrissors') {
+    return ('User wins!')
+  } else if (computerChoice === 'lizard') {
+    return ('Computer wins!')
   }
 }
 
