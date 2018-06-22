@@ -1,0 +1,303 @@
+<head>
+  <h1>
+    <center>
+      CHOICES
+    </center>
+  </h1>
+  <h2>
+    <center>
+      <button type="button" onclick=start()>Start Game</button>
+    </center>
+  </h2>
+  <style>
+    body {
+      background-color: black;
+      height: auto;
+      width: auto;
+      background-size: cover;
+    }
+
+    h1 {
+      color: white;
+    }
+
+  </style>
+</head>
+<script>
+  let inventory = [];
+
+  function start() {
+    var ready = prompt('Are you ready? (YES or NO)').toUpperCase();
+    if (ready === 'YES') {
+      newGame();
+    } else {
+      alert('Restart once you have overcome your fear');
+    }
+  }
+
+  function newGame() {
+    alert('You are the leader of a village called Lok, one of the few places with life. Your people live a peaceful life, but there has been constant attacks from the Yak village for the past couple of days.');
+    var awake = prompt('What do you do? (TALK or DECIDE)').toUpperCase();
+    switch (awake) {
+      case 'TALK':
+        alert('You decide to go visit the Yak village.');
+        talk();
+        break;
+      case 'DECIDE':
+        alert('You meet with the village elders to decide what would benefit the village as a whole.');
+        decide();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        newGame();
+    }
+  }
+
+  function talk() {
+    alert('You meet the leader of the Yak and try to negotiate an agreement.');
+    alert('The leader of the Yak gives you two options, to cut of your head and place it in his feet or to prepare for war. If you give your life the Yak leader promises he will leave your village alone, but if you disagree the people of Lok will die.');
+    var awake = prompt('Do you lay down your life for the sake of your people or do you prepare for war? (LAY or WAR)').toUpperCase();
+    switch (awake) {
+      case 'LAY':
+        alert('You decide to give your life for the safety of the Lok people, but little did you know that the leader of the Yak people always meant to betray you.');
+        alert('Beacuse of your foolishness the people of the Lok village were killed mercilessly and were robbed of all their valuable items as they were not prepared for an attack.');
+        lay();
+        break;
+      case 'WAR':
+        alert('You remember the words your grandfather told you when you were a child, "Never trust the Yak", and decide to prepare for war.');
+        alert('Before leaving you stab your knife into the floor infront of the leader of the Yak and with a smile full of pride you yell, "Prepare to die!" ')
+        war();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        talk();
+    }
+  }
+
+  function decide() {
+    alert('The elders decide it is best to runaway as the village has no chance of surviving a fullout attack from the Yak village.');
+    var awake = prompt('Do you go against the elders decision or do you listen to them? (AGAINST or LISTEN)').toUpperCase();
+    switch (awake) {
+      case 'AGAINST':
+        alert('You are angered by the decision of the elders and let them know that this decision will lead to the downfall of the village.');
+        alert('The elders laugh off your warning and deem you too foolish to be the leader of the Lok village and hereby strip you of the title of leader.');
+        against();
+        break;
+      case 'LISTEN':
+        alert('You decide that the elders must be thinking with the benefit of the village in mind and decide to follow along with their plans.');
+        alert('However what you did not know was that the elders were involved with the Yak.');
+        listen();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        decide();
+    }
+  }
+
+  function war() {
+    alert('You return to the village and guide the villagers to your secret hiding spot that only you knew of and tell them to leave the village.');
+    alert('The villagers pray for your safety and bid you farewell. As you cover the secret hiding spot you think back to your ancestors and what they would have done.');
+    alert('Suddenly there is a loud scream, one that shakes the land and you know that the time has arrived for you to take the battlefield.');
+    var awake = prompt('You must select a weapon to help you in this fight. Will you pick up your ancestors battle axe or will you start your own legend with a sword?(AXE or SWORD)').toUpperCase();
+    switch (awake) {
+      case 'AXE':
+        alert('You take the battle axe that has long been passed down by your ancestors with you and charge into the fight.');
+        alert('The Yak are great in number, but they tremble before the might of your ancestors, however you were not ready for such power yet and this leaves you vulnerable.');
+        axe();
+        break;
+      case 'SWORD':
+        alert('The sword is new and yet there is something mysterious and enticing about it. Something that screams greatness, something that you feel will help you protect your people.');
+        sword();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        war();
+    }
+  }
+
+  function axe() {
+    alert('The numbers of the Yak people is starting to overpower you and you can not get rid of this constant drowsiness.');
+    alert('As the Yak approach, your consciousness begins to fade and you faint.');
+    var awake = prompt('Do you give in and accept your fate or do you try to prevent it? (ACCEPT or PREVENT)').toUpperCASE();
+    switch (awake) {
+      case 'ACCEPT':
+        alert('Knowing the fact that your people are safe and that your time is up, you look up to the heavens and thank god for the opportunity to serve as the leader of the Lok. With a proud grin on your face you are slaughtered, but your praises are sung for eternity.');
+        accept();
+        break;
+      case 'PREVENT':
+        alert('Your fate has never held you down before and it will not now. With a fierce look in your eyes you rise and rush the enemy.');
+        prevent();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        axe();
+    }
+  }
+
+  function against() {
+    alert('You take all those who have committed their loyalty to you and march towards Yak.');
+    alert('Upon reaching Yak, your comrades are split between charging into the village head on or devising a plan and attacking the village.');
+    var awake = prompt('What do you decide? (CHARGE or PLAN)').toUpperCase();
+    switch (awake) {
+      case 'CHARGE':
+        alert('You and your men charge in blindly and are massacred by the massive army of Yak.');
+        charge();
+        break;
+      case 'PLAN':
+        alert('You create a plan to cause commotion in the village of Yak and using that as a distraction you plan to kidnap the daughter of the Yak leader.');
+        plan();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        against();
+    }
+  }
+
+  function sword() {
+    alert('This sword has given you immense power and within seconds you wipe out the entire Yak army.');
+    var awake = prompt('You see a man approaching you, but you can not make out who it is as you are too tired from the fight. Do you attack him or hide? (ATTACK or HIDE)').toUpperCase();
+    switch (awake) {
+      case 'ATTACK':
+        alert('You attack the man without knowing who it is at the moment. You faint from fatigue and wake up the next day to realize the crime you committed.');
+        alert('You killed your own brother without realizing it and you begin to understand the true mystery behind the sword.');
+        alert('However you do not care about solving the mystery behind this sword and instead take your own life as a way to show regret for what you have done.');
+        attack();
+        break;
+      case 'HIDE':
+        alert('You decide to hide as you are too tired to pick up your sword.');
+        hide();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        sword();
+    }
+  }
+
+  function hide() {
+    alert('However while the man passes you, you can feel the blood thirsty being emmitted from it. As if the sword wants you to kill the man.');
+    var awake = prompt('Do you give in to the blood thirst of the sword or not? (IN or NOT)').toUpperCase();
+    switch (awake) {
+      case 'IN':
+        alert('You decide to give in to the blood thirst and kill the man. After killing the man, the greed for blood thirst takes over you. You go on a rampage and kill whoever crosses your path. Because of all this fighting your wounds are constantly bleeding and you die due to loss of blood.'); in ();
+        break;
+      case 'NOT':
+        alert('You decide to throw away the sword as you realize it will lead you down a path of darkness. Upon throwing the sword away all the power you had received disappeared and you instantly became a shell of your former self.');
+        alert('Believing that it was a curse for whoever used the sword you decided to use all your remaining energy towards breaking it so no one else ends up in the state you are now.');
+        alert('As you take your last breath the sword breaks and you die with an unidentifiable smile on your face.');
+        not();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        hide();
+    }
+  }
+
+  function listen() {
+    alert('At night everyone in the village goes to sleep like usual, but little did they know that it would be their last night.');
+    var awake = prompt('You wake up after hearing multiple screams and you run outside to see the entire village on fire. Do you try to save people or do you try to get away? (SAVE or AWAY)').toUpperCase();
+    switch (awake) {
+      case 'SAVE':
+        alert('You run into houses trying your best to save as many people as possible.');
+        save();
+        break;
+      case 'AWAY':
+        alert('You try to run away as you are scared, but you are hit in the back with a poisonous arrow.');
+        alert('The poison slowly spreads throughout your body and you slowly die after hours of suffering.');
+        away();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        listen();
+    }
+  }
+
+  function save() {
+    alert('You get as many people out of their houses as you can and then you hear a scream for help.');
+    var awake = prompt('It is a little girl stuck in her room. Do you rescue her or do you ignore it? (RESCUE or IGNORE)');
+    switch (awake) {
+      case 'RESCUE':
+        alert('You decide to go rescue the girl and as you are trying to get her out the wall infront of you begins to fall. You push the girl out of thw way and save her while sacrificing your own life.');
+        rescue();
+        break;
+      case 'IGNORE':
+        alert("You ignore the little girl's cry for help as you deem it too dangerous.");
+        alert('All the villagers that survived this attack decided to split up as they were shook with fear.');
+        alert('You however could not live with the regret of letting an innocent young girl die so you create a well thought plan for revenge and execute it perfectly.');
+        alert('Upon killing the leader of the Yak, you let yourself be caught by the Yak people and you are hung to death, but as you are being hung you do not think of pain and instead pray that the little girl is satisfied with the death of her murderer.')
+        ignore();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        save();
+    }
+  }
+
+
+  function prevent() {
+    alert('Using your determination you defeat the army, but you have taken a lot of damage and you feel that it is over for you.');
+    var awake = prompt('Then from the corner of your eye you see a man who wants to help you. Do you believe he will bring you no harm? (TRUST or KILL)').toUpperCase();
+    switch (awake) {
+      case 'TRUST':
+        alert('You trust the man and he takes you to his village. There you are healed by a medic and after a few days are as good as new.');
+        trust();
+        break;
+      case 'KILL':
+        alert('You kill the man thinking he was lying to you and without no one left to support you, the battle wounds begin to take their effect. Not too long after you succumb to the same wounds.');
+        kill();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        prevent();
+    }
+  }
+
+  function plan() {
+    alert("Having kidnapped the daughter of the Yak people you take a long route back to Lok that way you are not suspected of any crime. However when you get back to the village you realize that you have fallen for the Yak leader's beautiful daughter, so you decide to tell her.");
+    alert('To your surprise she tells you that she has fallen in love with you as well and that she would like to marry you.');
+    alert('However you overhear the villagers discussing the public execution of your love.');
+    var awake = prompt('Do you tell the villagers or do you run away with your love? (TELL or RUN)').toUpperCase();
+    switch (awake) {
+      case 'TELL':
+        alert('You gather everyone in the Lok village and tell them of you plan to marry the daughter of the Yak leader.');
+        alert('At first the villagers oppose, but after discussion they agree. So you head off to the Yak village and tell them of your plans.');
+        alert('You also used this as an opportunity to create a truce between the Yak people and the Lok people. Eventually the leader of the Lok agreed and you were married to your love.');
+        alert('From that day forth the Yak and the Lok people never looked at each other as enemies and instead prayed for each other.');
+        tell();
+        break;
+      case 'RUN':
+        alert('After overhearing the villagers conversation you decide to take your love and run, but you are soon caught by the villagers.');
+        alert('Without listening to your part of the story the Lok people executed you and your love.');
+        alert('Upon learning about the death of his daughter, the leader of the Yak decided to attack Lok.');
+        alert('Without a leader to guide them the Lok people were quickly and mercilessly killed and the village was burned to the ground.');
+        alert('Because of your foolishness the entire village was completely wiped out.');
+        run();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        plan();
+    }
+  }
+
+  function trust() {
+    alert('Upon healing from your wounds you thank the man who saved your life and think of where to go.');
+    var awake = prompt('Do you return to the village and try to rebuild it or do you go on a journey? (VILLAGE or JOURNEY)').toUpperCase();
+    switch () {
+      case 'VILLAGE':
+        alert('You return to the village and start to rebuild the village in hopes of one day having the Lok village up and standing.');
+        village();
+        break;
+      case 'JOURNEY':
+        alert('With nowhere to call home you decide to go on a journey to look for a new place you could call home.');
+        journey();
+        break;
+      default:
+        alert('Review your spelling of the options');
+        trust();
+    }
+  }
+
+  function gameOver() {
+    alert('Game End')
+  }
+
+</script>
