@@ -19,8 +19,6 @@
   </style>
 </head>
 <script>
-  let inventory = [];
-
   function start() {
     var ready = prompt('Are you ready? (YES or NO)').toUpperCase();
     if (ready === 'YES') {
@@ -173,7 +171,7 @@
     var awake = prompt('Do you give in to the blood thirst of the sword or not? (IN or NOT)').toUpperCase();
     switch (awake) {
       case 'IN':
-        alert('You decide to give in to the blood thirst and kill the man. After killing the man, the greed for blood thirst takes over you. You go on a rampage and kill whoever crosses your path. Because of all this fighting your wounds are constantly bleeding and you die due to loss of blood.'); in ();
+        alert('You decide to give in to the blood thirst and kill the man. After killing the man, the greed for blood thirst takes over you. You go on a rampage and kill whoever crosses your path. Because of all this fighting your wounds are constantly bleeding and you die due to loss of blood.');
         break;
       case 'NOT':
         alert('You decide to throw away the sword as you realize it will lead you down a path of darkness. Upon throwing the sword away all the power you had received disappeared and you instantly became a shell of your former self.');
@@ -227,7 +225,6 @@
     }
   }
 
-
   function prevent() {
     alert('Using your determination you defeat the army, but you have taken a lot of damage and you feel that it is over for you.');
     var awake = prompt('Then from the corner of your eye you see a man who wants to help you. Do you believe he will bring you no harm? (TRUST or KILL)').toUpperCase();
@@ -276,7 +273,7 @@
   function trust() {
     alert('Upon healing from your wounds you thank the man who saved your life and think of where to go.');
     var awake = prompt('Do you return to the village and try to rebuild it or do you go on a journey? (VILLAGE or JOURNEY)').toUpperCase();
-    switch () {
+    switch (awake) {
       case 'VILLAGE':
         alert('You return to the village and start to rebuild the village in hopes of one day having the Lok village up and standing.');
         village();
@@ -290,5 +287,6 @@
         trust();
     }
   }
- start();
+  newGame();
+
 </script>
